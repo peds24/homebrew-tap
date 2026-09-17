@@ -7,18 +7,16 @@ cask "da-miniplayer" do
   desc "Floating, always-on-top Spotify mini player for macOS"
   homepage "https://github.com/peds24/dA-spotify-miniplayer"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "DAMiniPlayer.app"
 
-  postflight do
+  postflight_steps do
     # Alpha build, ad-hoc signed (no paid Apple Developer identity yet) — clear
     # the quarantine flag Homebrew's download sets, or Gatekeeper blocks the
     # first launch with "cannot be opened because it is from an unidentified
     # developer."
-    system_command "/usr/bin/xattr",
-                    args: ["-dr", "com.apple.quarantine", "#{appdir}/DAMiniPlayer.app"],
-                    sudo: false
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/DAMiniPlayer.app"]
   end
 
   zap trash: [
