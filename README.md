@@ -6,6 +6,7 @@ Personal Homebrew tap for [Pedro Serdio Hank](https://github.com/peds24)'s macOS
 
 ```bash
 brew tap peds24/tap
+brew trust peds24/tap
 brew install --cask da-miniplayer
 ```
 
