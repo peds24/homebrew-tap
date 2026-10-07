@@ -1,6 +1,6 @@
 cask "da-miniplayer" do
-  version "1.0.0"
-  sha256 "12f5b77458c4d1d474523a622122959e10b83e87bf08ab814d2a0b7ba36812c0"
+  version "1.1.0"
+  sha256 "fa574ffda21238c8491fc5c109f12b2da7967975d4834dbe096a92da8eeecf7f"
 
   url "https://github.com/peds24/dA-spotify-miniplayer/releases/download/v#{version}/DAMiniPlayer-v#{version}.zip"
   name "DA Mini Player"
